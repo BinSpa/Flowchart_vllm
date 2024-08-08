@@ -10,8 +10,6 @@ import time
 import math
 import cv2
 # ppocr
-from paddleocr import PaddleOCR, draw_ocr
-
 def parse_args():
     parser = argparse.ArgumentParser(description="Flowchart Inference")
     parser.add_argument(
@@ -52,59 +50,6 @@ def get_prompt(
 ):
     prompt = "我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
     return prompt
-
-def OCR_Detect(image_path):
-    def distance(point1, point2):
-        # left,up,right,down,计算两个中心点坐标
-        # 点坐标用(x,y)表示
-        centric1 = ((point1[0]+point1[2])/2, (point1[1]+point1[3])/2) 
-        centric2 = ((point2[0]+point2[2])/2, (point2[1]+point2[3])/2)
-        dist = math.sqrt((centric2[0]-centric1[0])**2 + (centric2[1]-centric2[1])**2)
-        return dist
-
-    def mergeboxes(boxes, texts):
-        i = 0
-        merged = False
-        while merged:
-            merged = False
-            i = 0
-            while i < len(boxes):
-                j = i+1
-                while j < len(boxes):
-                    if distance(boxes[i], boxes[j]) <= 15:
-                        # 合并
-                        left = min(boxes[i][0], boxes[j][0])
-                        up = min(boxes[i][1], boxes[j][1])
-                        right = max(boxes[i][2], boxes[j][2])
-                        down = max(boxes[i][3], boxes[j][3])
-                        boxes[i] = (left, up, right, down)
-                        texts[i] = texts[i] + texts[j]
-                        del boxes[j]
-                        del texts[j]
-                        merged = True
-                        break
-                    j += 1
-                if merged:
-                    break
-                i += 1
-        return boxes, texts
-
-    # ocr模型识别文本框
-    ocr = PaddleOCR(use_angle_cls=True, lang="ch")
-    result = ocr.ocr(image_path, cls=True)
-    # 转换坐标为四元组(left, up, right, down)
-    # 记录text
-    boxes = []
-    texts = []
-    for idx in range(len(result)):
-        res = result[idx]
-        for line in res:
-            texts.append(line[1][0])
-            left, up, right, down = line[0][0], line[0][1], line[2][0], line[2][1]
-            boxes.append((left,up,right,down))
-    # 合并距离过近的text
-    boxes, texts = mergeboxes(boxes, texts)
-    return boxes, texts
     
 def inference_images(
     args,
@@ -199,18 +144,7 @@ if __name__ == "__main__":
         print("Loaded model: {}\n".format(engine))
         set_random_seed(args.seed)
         out_path = f"results/{engine}.json"
-        ocr_path = f"/data1/gyl/HZBank/ocrres"
         print("Start evaluating. Output is to be saved to:{}".format(out_path))
-        image_names = os.listdir(args.image_dir)
-        for image_name in image_names:
-            image_path = os.path.join(args.image_dir, image_name)
-            boxes, texts = OCR_Detect(image_path)
-            image = cv2.imread(image_path)
-            for (x1,y1,x2,y2) in boxes:
-                cv2.rectangle(image, (x1,y1), (x2,y2), (0,0,255), 2)
-            save_path = os.path.join(ocr_path, image_name)
-            cv2.imwrite(save_path, image)
-        args.image_dir = ocr_path
         model, tokenizer, processor = load_models.load_i2t_model(engine, args)
         results_dict = inference_images(
             args,
