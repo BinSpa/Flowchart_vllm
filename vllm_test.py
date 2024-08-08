@@ -196,7 +196,6 @@ def inference_images(
 if __name__ == "__main__":
     args = parse_args()
     for engine in args.engine:
-        model, tokenizer, processor = load_models.load_i2t_model(engine, args)
         print("Loaded model: {}\n".format(engine))
         set_random_seed(args.seed)
         out_path = f"results/{engine}.json"
@@ -204,7 +203,7 @@ if __name__ == "__main__":
         print("Start evaluating. Output is to be saved to:{}".format(out_path))
         image_names = os.listdir(args.image_dir)
         for image_name in image_names:
-            image_path = os.path.join(args.image_dir, image_names)
+            image_path = os.path.join(args.image_dir, image_name)
             boxes, texts = PaddleOCR(image_path)
             image = cv2.imread(image_path)
             for (x1,y1,x2,y2) in boxes:
@@ -212,6 +211,7 @@ if __name__ == "__main__":
             save_path = os.path.join(ocr_path, image_name)
             cv2.imwrite(save_path, image)
         args.image_dir = ocr_path
+        model, tokenizer, processor = load_models.load_i2t_model(engine, args)
         results_dict = inference_images(
             args,
             engine,
