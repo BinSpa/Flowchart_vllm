@@ -53,7 +53,7 @@ def get_prompt(
     prompt = "我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
     return prompt
 
-def PaddleOCR(image_path):
+def OCR_Detect(image_path):
     def distance(point1, point2):
         # left,up,right,down,计算两个中心点坐标
         # 点坐标用(x,y)表示
@@ -204,7 +204,7 @@ if __name__ == "__main__":
         image_names = os.listdir(args.image_dir)
         for image_name in image_names:
             image_path = os.path.join(args.image_dir, image_name)
-            boxes, texts = PaddleOCR(image_path)
+            boxes, texts = OCR_Detect(image_path)
             image = cv2.imread(image_path)
             for (x1,y1,x2,y2) in boxes:
                 cv2.rectangle(image, (x1,y1), (x2,y2), (0,0,255), 2)
