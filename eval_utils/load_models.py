@@ -48,7 +48,7 @@ def load_i2t_model(engine, args=None):
         processor = image_processor
     elif "deepseek" in engine:
         from transformers import AutoModelForCausalLM
-        from deepseek_vl.models import VLChatProcessor, MultiModalityCausalLM
+        from deepseek-vl.models import VLChatProcessor, MultiModalityCausalLM
 
         ckpt = f"deepseek-ai/deepseek-vl-7b-chat"
         processor: VLChatProcessor = VLChatProcessor.from_pretrained(ckpt,cache_dir="/data1/gyl/HZBank/vllm_models")
