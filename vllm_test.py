@@ -42,6 +42,8 @@ def parse_args():
     parser.add_argument(
         "--max-new-tokens", default=512, type=int, help="Max new tokens for generation."
     )
+    parser.add_argument("--seed", default=0, type=int, help="Random seed.")
+    
     return parser.parse_args()
 
 def get_prompt(
