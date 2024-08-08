@@ -16,7 +16,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Flowchart Inference")
     parser.add_argument(
         "--image_dir",
-        default="None",
+        default="/data1/gyl/HZBank/archs",
         type=str,
     )
     parser.add_argument(
@@ -40,7 +40,7 @@ def parse_args():
         nargs="+",
     )
     parser.add_argument(
-        "--max-new-tokens", default=15, type=int, help="Max new tokens for generation."
+        "--max-new-tokens", default=512, type=int, help="Max new tokens for generation."
     )
     return parser.parse_args()
 
@@ -198,7 +198,7 @@ if __name__ == "__main__":
         print("Loaded model: {}\n".format(engine))
         set_random_seed(args.seed)
         out_path = f"results/{engine}.json"
-        ocr_path = f"ocrres/"
+        ocr_path = f"/data1/gyl/HZBank/ocrres"
         print("Start evaluating. Output is to be saved to:{}".format(out_path))
         image_names = os.listdir(args.image_dir)
         for image_name in image_names:
