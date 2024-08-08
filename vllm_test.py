@@ -154,6 +154,7 @@ if __name__ == "__main__":
             processor,
             out_path,
         )
+        print(results_dict)
         with open(out_path, "w") as f:
             json.dump(results_dict, f, indent=4)
         print(f"Finished evaluating. Output saved to:{out_path}")
