@@ -61,6 +61,7 @@ def inference_images(
 ):
     image_names = os.listdir(args.image_dir)
     for image_name in tqdm(image_names):
+        print("the image name is :{}".format(image_name))
         image_path = os.path.join(args.image_dir, image_name)
         prompt = get_prompt(engine, args)
         if "qwen-vl" in engine:
