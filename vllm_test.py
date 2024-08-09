@@ -87,7 +87,7 @@ def inference_images(
             )
         elif "internlm-x2" in engine:
             image = Image.open(image_path).convert("RGB")
-            query_image = model.vis_process(image)
+            query_image = model.vis_processor(image)
             input_text = f"{prompt}"
             input_text = "<ImageHere>"
             input_text += f"请你为我生成描述。\nAnswer:"
