@@ -63,7 +63,7 @@ def inference_images(
     image_names = os.listdir(args.image_dir)
     final_inputs = None
     for image_name in tqdm(image_names):
-        print("the image name is :{}".format(image_name))
+        # print("the image name is :{}".format(image_name))
         image_path = os.path.join(args.image_dir, image_name)
         prompt = get_prompt(engine, args)
         if "qwen-vl" in engine:
@@ -146,7 +146,7 @@ def inference_images(
             "prediction" : predicted_answer
         }
             
-        return results
+    return results
 
 
 if __name__ == "__main__":
@@ -165,7 +165,6 @@ if __name__ == "__main__":
             processor,
             out_path,
         )
-        print(results_dict)
         with open(out_path, "w") as f:
             json.dump(results_dict, f, indent=4)
         print(f"Finished evaluating. Output saved to:{out_path}")
