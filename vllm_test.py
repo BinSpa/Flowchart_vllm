@@ -59,6 +59,7 @@ def inference_images(
     processor,
     out_path,
 ):
+    results = dict()
     image_names = os.listdir(args.image_dir)
     for image_name in tqdm(image_names):
         print("the image name is :{}".format(image_name))
@@ -135,8 +136,10 @@ def inference_images(
                 predicted_answer = tokenizer.decode(
                     outputs[0].cpu().tolist(), skip_special_tokens=True
                 )
+
+                results[image_name] = predicted_answer
             
-        return predicted_answer
+        return results
 
 
 if __name__ == "__main__":
