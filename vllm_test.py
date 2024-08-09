@@ -34,7 +34,7 @@ def parse_args():
             "deepseek-vl-7b-chat-v2",  # modified prompting template
             "step-1v",
         ],
-        default=["qwen-vl"],
+        default=["internlm-x2"],
         nargs="+",
     )
     parser.add_argument(
@@ -85,7 +85,7 @@ def inference_images(
             predicted_answer = tokenizer.decode(
                 pred[:, input_token_len:].cpu()[0], skip_special_tokens=True
             )
-        elif "internlm-x" in engine:
+        elif "internlm-x2" in engine:
             image = Image.open(image_path).convert("RGB")
             query_image = model.vis_process(image)
             input_text = f"{prompt}"

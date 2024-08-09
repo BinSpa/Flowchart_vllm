@@ -11,7 +11,7 @@ def create_image_with_text(top_text, image_path, bottom_text, output_path):
     # 设置字体（根据需要调整字体大小和类型）
     try:
         # 尝试加载一个特定的字体文件
-        font = ImageFont.truetype("arial.ttf", 36)
+        font = ImageFont.truetype("simsun.ttc", 20)
     except IOError:
         # 如果无法加载特定字体，则使用默认字体
         font = ImageFont.load_default()
@@ -52,5 +52,5 @@ if __name__ == "__main__":
         image_path = os.path.join(image_dir, key)
         top_text = value["prompt"]
         bot_text = value["prediction"]
-        create_image_with_text(top_text, image_path, bot_text, os.path.join(output_path, "{}_{}.png".format(key.split('.')[0], engine)))
+        create_image_with_text(str(top_text), image_path, str(bot_text), os.path.join(output_path, "{}_{}.png".format(key.split('.')[0], engine)))
 
