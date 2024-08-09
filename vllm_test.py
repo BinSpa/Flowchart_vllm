@@ -61,6 +61,7 @@ def inference_images(
 ):
     results = dict()
     image_names = os.listdir(args.image_dir)
+    final_inputs = None
     for image_name in tqdm(image_names):
         print("the image name is :{}".format(image_name))
         image_path = os.path.join(args.image_dir, image_name)
@@ -69,6 +70,7 @@ def inference_images(
             inputs = [{"text": f"你是一个乐于助人的助手。{prompt}"}]
             inputs.append({"image":f"{image_path}"})
             inputs.append({"text":"User: " + "请你为我生成描述。" + "\nAssistant: "})
+            final_inputs = inputs
             total_inputs = tokenizer.from_list_format(inputs)
             inputs = tokenizer(total_inputs, return_tensors="pt")
             inputs = inputs.to(model.device)
@@ -89,6 +91,7 @@ def inference_images(
             input_text = f"{prompt}"
             input_text = "<ImageHere>"
             input_text += f"请你为我生成描述。\nAnswer:"
+            final_inputs = input_text
             query_image = torch.stack(query_image).to(torch.bfloat16).cuda()
             predicted_answer, history = model.chat(
                 tokenizer,
@@ -115,6 +118,7 @@ def inference_images(
                 },
                 {"role": "Assistant", "content":""}
             ]
+            final_inputs = conversation
             pil_images = load_pil_images(conversation)
             prepare_inputs = processor(
                 conversation=conversation, images=pil_images, force_batchify=True
@@ -137,7 +141,10 @@ def inference_images(
                     outputs[0].cpu().tolist(), skip_special_tokens=True
                 )
 
-                results[image_name] = predicted_answer
+        results[image_name] = {
+            "prompt" : final_inputs,
+            "prediction" : predicted_answer
+        }
             
         return results
 
