@@ -85,18 +85,19 @@ def inference_images(
             predicted_answer = tokenizer.decode(
                 pred[:, input_token_len:].cpu()[0], skip_special_tokens=True
             )
-        elif "internlm-x2" in engine:
+        elif "internlm-x" in engine:
             image = Image.open(image_path).convert("RGB")
-            query_image = model.vis_processor(image)
+            query_images = []
+            query_images.append(model.vis_processor(image))
             input_text = f"{prompt}"
             input_text = "<ImageHere>"
             input_text += f"请你为我生成描述。\nAnswer:"
             final_inputs = input_text
-            query_image = torch.stack(query_image).to(torch.bfloat16).cuda()
+            query_images = torch.stack(query_images).to(torch.bfloat16).cuda()
             predicted_answer, history = model.chat(
                 tokenizer,
                 query=input_text,
-                image=query_image,
+                image=query_images,
                 history=[],
                 do_sample=False,
                 max_new_tokens=args.max_new_tokens,

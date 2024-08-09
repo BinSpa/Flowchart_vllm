@@ -44,7 +44,7 @@ def create_image_with_text(top_text, image_path, bottom_text, output_path):
 if __name__ == "__main__":
     image_dir = "/home/rsr/gyl/HZBank/ocrres"
     json_path = "results/qwen-vl-chat.json"
-    output_path = "visualization/qwen-vl-chat/"
+    output_path = "../visualization/qwen-vl-chat/"
     engine = "qwen-vl-chat"
     with open(json_path, 'r', encoding='utf-8') as f:
         result = json.load(f)
