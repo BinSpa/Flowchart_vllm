@@ -116,7 +116,7 @@ def inference_images(
             final_inputs = conversation
             pil_images = load_pil_images(conversation)
             prepare_inputs = processor(
-                conversation=conversation, images=pil_images, force_batchify=True
+                conversations=conversation, images=pil_images, force_batchify=True
             ).to(model.device)
 
             with torch.no_grad():
