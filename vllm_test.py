@@ -108,7 +108,7 @@ def inference_images(
             conversation = [
                 {
                     "role": "User",
-                    "content": "{}".format(prompt),
+                    "content": "<image_placeholder>{}".format(prompt),
                     "images": [image_path],
                 },
                 {"role": "Assistant", "content":""}
