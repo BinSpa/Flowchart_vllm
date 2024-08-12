@@ -48,7 +48,8 @@ def get_prompt(
     args,
     engine,
 ):
-    prompt = "我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+    prompt = "我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。\
+    请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
     return prompt
     
 def inference_images(
@@ -89,9 +90,9 @@ def inference_images(
             image = Image.open(image_path).convert("RGB")
             query_images = []
             query_images.append(model.vis_processor(image))
-            input_text = f"{prompt}"
+            # input_text = f"{prompt}"
             input_text = "<ImageHere>"
-            input_text += f"请你为我生成描述。\nAnswer:"
+            input_text += f"{prompt}。\nAnswer:"
             final_inputs = input_text
             query_images = torch.stack(query_images).to(torch.bfloat16).cuda()
             predicted_answer, history = model.chat(
