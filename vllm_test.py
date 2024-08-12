@@ -108,7 +108,7 @@ def inference_images(
             conversation = [
                 {
                     "role": "User",
-                    "content": "<image_placeholder>{}".format(prompt),
+                    "content": "<image_placeholder>我在图中感兴趣的文本周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。",
                     "images": [image_path],
                 },
                 {"role": "Assistant", "content":""}
