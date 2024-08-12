@@ -34,7 +34,7 @@ def parse_args():
             "deepseek-vl-7b-chat-v2",  # modified prompting template
             "step-1v",
         ],
-        default=["deepseek"],
+        default=["internlm-x"],
         nargs="+",
     )
     parser.add_argument(
