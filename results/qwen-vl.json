@@ -1,0 +1,282 @@
+{
+    "arch_5.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_5.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "生成描述如下: 该系统是一个基于深度学习的图像处理系统,可以对图像进行处理和分析,包括图像的预处理、特征提取、分类和识别等。该系统可以应用于各种领域,如医学图像分析、自动驾驶、安防监控等。"
+    },
+    "arch_3.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_3.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "该流程图描述了从原始数据到三维模型的整个过程。首先，需要将原始数据转换为CAD模型，然后进行实体化，最后生成三维模型。在实体化过程中，需要进行几何校正和几何优化，以确保模型的准确性和稳定性。三维模型可以进一步优化，以提高模型的精度和性能。"
+    },
+    "arch_11.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_11.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "请看下图，这是您请求支付的流程图。"
+    },
+    "arch_14.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_14.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "请看下面的描述：在1991年，一位名叫约翰·麦卡锡的美国计算机科学家发明了第一台个人电脑。在1995年，微软公司推出了Windows 95操作系统，这使得个人电脑的普及率得到了极大的提升。在2000年，互联网的普及率达到了高峰，人们可以通过网络进行各种各样的活动。在2010年，苹果公司推出了第一台iPhone，这使得智能手机成为了人们生活中必不可少的物品。在2019年，人工智能技术得到了极大的发展，人们可以通过语音助手进行各种操作。"
+    },
+    "arch_12.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_12.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "请看以下描述:\nM5管理认证是一个由五个模块组成的认证体系,包括项目管理、质量管理、风险管理、成本管理、人力资源管理。每个模块都有自己的课程和考试。通过认证,可以证明你具备了相应的管理能力,在职场上具有竞争力。"
+    },
+    "arch_15.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_15.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "你好,根据你的需求,我为你生成了描述。这个流程图展示了从2020年4月28日到2018年7月25日的项目开发过程。在这个过程中,我们经历了项目规划、原型设计、ER图设计、参与原型开发、UI/UX设计、前端开发、后端开发、测试和部署。整个项目历时6个月,于2018年8月26日完成。"
+    },
+    "arch_1.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_1.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "生成描述如下：\n基于SFM算法的无人机校园三维建模具体流程为:设置飞行参数、采集目标区域图像、具有一定覆盖度的封闭密集点集、生成密集点云数据、初始化知识库、构建结构、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、优化投影矩阵、构建三维场景、初步构建、生成密集点云数据、去除冗余数据、"
+    },
+    "arch_13.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_13.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "你好，我可以为你生成描述。请告诉我你想要描述的内容是什么。"
+    },
+    "arch_2.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_2.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "请问您需要描述什么内容呢?"
+    },
+    "arch_18.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_18.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "生成描述如下: 该流程图描述了一个需求获取、生成类图、类进行分解、把类打包成构件、需求评审的流程。其中,需求获取是通过需求库获取需求,生成类图是根据需求生成类图,类进行分解是将类进行分解,把类打包成构件是将类打包成构件,需求评审是进行需求评审。"
+    },
+    "arch_19.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_19.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "生成描述如下：\nFlink是一个开源的、可扩展的、高性能的流数据处理引擎。它支持流数据的实时处理、离线处理、流处理和批处理。Flink可以处理多种数据类型，包括结构化数据、半结构化数据和非结构化数据。Flink可以处理多种数据源，包括Hadoop、HDFS、HBase、Cassandra、Kafka、RDBMS、NoSQL、文件系统、传感器、网络设备等。Flink可以处理多种数据类型，包括流数据、批数据、时间序列数据、日志数据、文本数据、图像数据、视频数据等。Flink可以处理多种应用场景，包括金融、医疗、物联网、交通、能源、零售、制造、媒体、政府等。Flink可以与多种框架和工具集成，包括Spark、Storm、Hadoop、Kafka、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、RabbitMQ、Zookeeper、Kafka、HDFS、HBase、Cassandra、"
+    },
+    "arch_16.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_16.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "请问您需要描述什么内容呢?"
+    },
+    "arch_7.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_7.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "生成描述如下: 该系统采用多级嵌套的结构,通过多级嵌套的结构,可以实现对图像的多尺度、多方向、多角度的分析,同时结合多模态信息,可以实现对图像的多模态信息的融合,从而提高图像的识别率。该系统可以应用于智能交通、智能安防、智能医疗等领域,具有广泛的应用前景。"
+    },
+    "arch_9.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_9.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "你好，我将为你生成一个用户描述。用户是一个具有多种功能的系统，包括用户管理、商品管理、订单管理、订单推荐、商品推荐、物流管理、物流配送、用户中心管理等模块。"
+    },
+    "arch_8.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_8.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "请看以下的描述:\n二维地下管线综合管理系统\n技术选型\nWeb前端技术\nHTML、CSS、JavaScript\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net\nApp Net"
+    },
+    "arch_6.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_6.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "生成描述如下：本系统采用HIRISE单幅影像预处理算法，对图像进行预处理，然后通过高分辨DEM生成算法，生成高分辨率DEM。"
+    },
+    "arch_10.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_10.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "生成描述的流程如下：1. 生成描述的流程图。2. 生成描述的流程图中，用红框圈出文本内容。3. 用红框圈出文本内容，结合流程图的结构，生成一段描述。4. 生成描述。5. 提供反馈。6. 提供反馈后再次生成描述。7. 提供反馈后再次生成描述。8. 提供反馈后再次生成描述。9. 提供反馈后再次生成描述。10. 提供反馈后再次生成描述。11. 提供反馈后再次生成描述。12. 提供反馈后再次生成描述。13. 提供反馈后再次生成描述。14. 提供反馈后再次生成描述。15. 提供反馈后再次生成描述。16. 提供反馈后再次生成描述。17. 提供反馈后再次生成描述。18. 提供反馈后再次生成描述。19. 提供反馈后再次生成描述。20. 提供反馈后再次生成描述。21. 提供反馈后再次生成描述。22. 提供反馈后再次生成描述。23. 提供反馈后再次生成描述。24. 提供反馈后再次生成描述。25. 提供反馈后再次生成描述。26. 提供反馈后再次生成描述。27. 提供反馈后再次生成描述。28. 提供反馈后再次生成描述。29. 提供反馈后再次生成描述。30. 提供反馈后再次生成描述。31. 提供反馈后再次生成描述。32. 提供反馈后再次生成描述。33. 提供反馈后再次生成描述。34. 提供反馈后再次生成描述。35. 提供反馈后再次生成描述。36. 提供反馈后再次生成描述。37. 提供反馈后再次生成描述。38. 提供反馈后再次生成描述。39. 提供反馈后再次生成描述。40. 提供反馈后再次生成描述。41. 提供反馈后再次生成描述。42. 提供反馈后再次生成描述。43. 提供反馈后再次生成描述。44. 提供反馈后再次生成描述。45. 提供反馈后再次生成描述。46. 提供反馈后再次生成描述"
+    },
+    "arch_17.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_17.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "你好，我可以为你生成一个描述。请问你需要描述什么内容呢？"
+    },
+    "arch_4.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_4.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "生成描述如下: 该系统是一个基于用户中心的销售管理系统,包括用户数据管理、销售数据管理、报表数据管理等模块。系统采用分布式架构,支持多用户同时访问,并提供完善的权限控制和数据备份功能。"
+    },
+    "arch_20.png": {
+        "prompt": [
+            {
+                "text": "你是一个乐于助人的助手。我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+            },
+            {
+                "image": "/data1/gyl/HZBank/ocrres/arch_20.png"
+            },
+            {
+                "text": "User: 请你为我生成描述。\nAssistant: "
+            }
+        ],
+        "prediction": "该系统由车载式视频轨道检查巡检系统、移动监控终端、4G无线传输设备、视频监控中心、视频监控中心服务器、视频监控中心数据库、视频监控中心数据管理软件、视频监控中心数据采集软件、视频监控中心数据处理软件、视频监控中心数据存储软件、视频监控中心数据备份软件、视频监控中心数据恢复软件、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份软件、视频监控中心数据恢复软件、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、视频监控中心数据备份设备、视频监控中心数据恢复设备、"
+    }
+}
