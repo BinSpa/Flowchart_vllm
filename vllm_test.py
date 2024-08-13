@@ -42,14 +42,19 @@ def parse_args():
     )
     parser.add_argument("--seed", default=0, type=int, help="Random seed.")
     
+    parser.add_argument("--prompt", default='normal', type=str, help="the prompt type with ocr or not")
+    
     return parser.parse_args()
 
 def get_prompt(
     args,
     engine,
 ):
-    prompt = "我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。\
-    请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+    if 'ocr' in args.prompt:
+        prompt = "我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。\
+        请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
+    else:
+        prompt = "请你结合图像中的结构和文本，生成一段针对这个图的描述，要求准确反应图中各个节点和边的关系，语言简洁明了。"
     return prompt
     
 def inference_images(
@@ -150,7 +155,7 @@ if __name__ == "__main__":
     for engine in args.engine:
         print("Loaded model: {}\n".format(engine))
         set_random_seed(args.seed)
-        out_path = f"results/{engine}.json"
+        out_path = f"results/{engine}_{args.prompt}.json"
         print("Start evaluating. Output is to be saved to:{}".format(out_path))
         model, tokenizer, processor = load_models.load_i2t_model(engine, args)
         results_dict = inference_images(
