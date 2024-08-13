@@ -14,7 +14,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Flowchart Inference")
     parser.add_argument(
         "--image_dir",
-        default="/data1/gyl/HZBank/ocrres",
+        default="/data1/gyl/HZBank/archs",
         type=str,
     )
     parser.add_argument(
