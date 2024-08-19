@@ -50,7 +50,8 @@ def get_prompt(
     args,
     engine,
 ):
-    if 'ocr' in args.prompt:
+    print(type(args))
+    if "ocr" in args.prompt:
         prompt = "我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。\
         请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
     else:
