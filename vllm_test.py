@@ -50,7 +50,6 @@ def get_prompt(
     args,
     engine,
 ):
-    print(type(args))
     if "ocr" in args.prompt:
         prompt = "我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。\
         请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
@@ -72,8 +71,7 @@ def inference_images(
     for image_name in tqdm(image_names):
         # print("the image name is :{}".format(image_name))
         image_path = os.path.join(args.image_dir, image_name)
-        print(type(args))
-        prompt = get_prompt(engine, args)
+        prompt = get_prompt(args, engine)
         if "qwen-vl" in engine:
             inputs = [{"text": f"你是一个乐于助人的助手。{prompt}"}]
             inputs.append({"image":f"{image_path}"})
