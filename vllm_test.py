@@ -156,7 +156,7 @@ if __name__ == "__main__":
         print("Loaded model: {}\n".format(engine))
         set_random_seed(args.seed)
         out_path = f"results/{engine}_{args.prompt}.json"
-        print("Start evaluating. Output is to be saved to:{}".format(out_path))
+        print("Start evaluating. Output is to be saved to:{}_{}.json".format(out_path, args.prompt))
         model, tokenizer, processor = load_models.load_i2t_model(engine, args)
         results_dict = inference_images(
             args,
