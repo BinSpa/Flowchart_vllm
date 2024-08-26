@@ -113,7 +113,7 @@ def load_i2t_model(engine, args=None):
         )
         model.tokenizer = tokenizer
         processor = None
-    elif engine == "internlv2":
+    elif engine == "internvl2":
         ckpt = "OpenGVLab/InternVL2-8B"
         model = transformers.AutoModel.from_pretrained(
             ckpt,

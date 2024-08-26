@@ -28,13 +28,14 @@ def parse_args():
             "qwen-vl-max",
             "qwen-vl-chat",
             "internlm-x2",
+            "internvl2",
             "emu2-chat",
             "idefics-9b-instruct",
             "deepseek-vl-7b-chat",
             "deepseek-vl-7b-chat-v2",  # modified prompting template
             "step-1v",
         ],
-        default=["internvl"],
+        default=["internvl2"],
         nargs="+",
     )
     parser.add_argument(
