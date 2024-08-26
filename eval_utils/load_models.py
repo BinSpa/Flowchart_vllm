@@ -121,7 +121,7 @@ def load_i2t_model(engine, args=None):
             low_cpu_mem_usage=True,
             use_flash_attn=True,
             trust_remote_code=True,
-            device_map=device_map).eval()
+            device_map="cuda").eval()
         tokenizer = transformers.AutoTokenizer.from_pretrained(ckpt, trust_remote_code=True, use_fast=False)
         processor = None
     elif engine == "openflamingo":
