@@ -1,9 +1,10 @@
-from paddleocr import PaddleOCR, draw_ocr
+# from paddleocr import PaddleOCR, draw_ocr
 import os
 import cv2
-import math
 from tqdm import tqdm
+from pix2text import Pix2Text
 
+'''
 def OCR_Detect(image_path, ocr):
     def distance(point1, point2):
         # left,up,right,down,计算两个中心点坐标
@@ -57,15 +58,30 @@ def OCR_Detect(image_path, ocr):
     # 合并距离过近的text
     # boxes, texts = mergeboxes(boxes, texts)
     return boxes, texts
+'''
+# pixel2text
+def OCR_Detect(image_path, p2t):
+    outs = p2t.recognize_text(image_path, return_text=False)
+    boxes, texts = [], []
+    for out in outs:
+        positions = out["position"]
+        text = out["text"]
+        texts.append(text)
+        x1, y1 = positions[0][0], positions[0][1]
+        x2, y2 = positions[2][0], positions[2][1]
+        boxes.append([x1, y1, x2, y2])
+    return boxes, texts 
 
 if __name__ == "__main__":
-    ocr_dir = "/home/rsr/gyl/HZBank/ocrres"
-    img_dir = "/home/rsr/gyl/HZBank/new_archs"
+    ocr_dir = "D:\HZBank\\vllms\ocrres"
+    img_dir = "D:\HZBank\\vllms\\archs"
     image_names = os.listdir(img_dir)
-    ocr = PaddleOCR(use_angle_cls=True, lang="ch")
+    # ocr = PaddleOCR(use_angle_cls=True, lang="ch")
+    p2t = Pix2Text.from_config(device='cpu')
     for image_name in tqdm(image_names):
         image_path = os.path.join(img_dir, image_name)
-        boxes, texts = OCR_Detect(image_path, ocr)
+        # OCR_Detect(image_path, p2t)
+        boxes, texts = OCR_Detect(image_path, p2t)
         image = cv2.imread(image_path)
         for (x1,y1,x2,y2) in boxes:
             cv2.rectangle(image, (int(x1),int(y1)), (int(x2),int(y2)), (0,0,255), 2)

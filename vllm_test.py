@@ -14,7 +14,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Flowchart Inference")
     parser.add_argument(
         "--image_dir",
-        default="/data1/gyl/HZBank/archs",
+        default="/data1/gyl/HZBank/ocrres",
         type=str,
     )
     parser.add_argument(
@@ -34,7 +34,7 @@ def parse_args():
             "deepseek-vl-7b-chat-v2",  # modified prompting template
             "step-1v",
         ],
-        default=["internlm-x2"],
+        default=["internvl"],
         nargs="+",
     )
     parser.add_argument(
@@ -42,7 +42,7 @@ def parse_args():
     )
     parser.add_argument("--seed", default=0, type=int, help="Random seed.")
     
-    parser.add_argument("--prompt", default='normal', type=str, help="the prompt type with ocr or not")
+    parser.add_argument("--prompt", default='ocr', type=str, help="the prompt type with ocr or not")
     
     return parser.parse_args()
 
@@ -51,7 +51,7 @@ def get_prompt(
     engine,
 ):
     if "ocr" in args.prompt:
-        prompt = "我将提供一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。\
+        prompt = "这是一个流程图或者架构图，其中在感兴趣的文本节点周围绘制了红框。\
         请你用红框中的文本内容，结合这个图像的结构，生成一段文本描述这个图，反应图中各个节点和边的关系。"
     else:
         prompt = "请你结合图像中的结构和文本，生成一段针对这个图的描述，要求准确反应图中各个节点和边的关系，语言简洁明了。"
@@ -108,6 +108,15 @@ def inference_images(
                 do_sample=False,
                 max_new_tokens=args.max_new_tokens,
             )
+        elif "internvl" in engine:
+            # set the max number of tiles in `max_num`
+            pixel_values = load_image(image_path, max_num=12).to(torch.bfloat16).cuda()
+            generation_config = dict(max_new_tokens=512, do_sample=True)
+            # single-image single-round conversation (单图单轮对话)
+            question = f'<image>\n{prompt}'
+            predicted_answer = model.chat(tokenizer, pixel_values, question, generation_config)
+            final_inputs = question
+            # print(f'User: {question}\nAssistant: {response}')
         elif "deepseek" in engine:
             from deepseek_vl.utils.io import load_pil_images
             input_text = f"{prompt}"

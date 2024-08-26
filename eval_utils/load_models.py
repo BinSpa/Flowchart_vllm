@@ -113,6 +113,17 @@ def load_i2t_model(engine, args=None):
         )
         model.tokenizer = tokenizer
         processor = None
+    elif engine == "internlv2":
+        ckpt = "OpenGVLab/InternVL2-8B"
+        model = transformers.AutoModel.from_pretrained(
+            ckpt,
+            torch_dtype=torch.bfloat16,
+            low_cpu_mem_usage=True,
+            use_flash_attn=True,
+            trust_remote_code=True,
+            device_map=device_map).eval()
+        tokenizer = transformers.AutoTokenizer.from_pretrained(ckpt, trust_remote_code=True, use_fast=False)
+        processor = None
     elif engine == "openflamingo":
         from open_flamingo import create_model_and_transforms
 
