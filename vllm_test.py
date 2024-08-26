@@ -111,7 +111,7 @@ def inference_images(
             )
         elif "internvl" in engine:
             # set the max number of tiles in `max_num`
-            pixel_values = load_image(image_path, max_num=12).to(torch.bfloat16).cuda()
+            pixel_values = internvl_load_image(image_path, max_num=12).to(torch.bfloat16).cuda()
             generation_config = dict(max_new_tokens=512, do_sample=True)
             # single-image single-round conversation (单图单轮对话)
             question = f'<image>\n{prompt}'
