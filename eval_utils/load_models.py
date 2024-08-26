@@ -121,8 +121,10 @@ def load_i2t_model(engine, args=None):
             low_cpu_mem_usage=True,
             use_flash_attn=True,
             trust_remote_code=True,
-            device_map="cuda").eval()
-        tokenizer = transformers.AutoTokenizer.from_pretrained(ckpt, trust_remote_code=True, use_fast=False)
+            device_map="cuda",
+            cache_dir="/data1/gyl/HZBank/vllm_models").eval()
+        tokenizer = transformers.AutoTokenizer.from_pretrained(ckpt, trust_remote_code=True, use_fast=False,
+        cache_dir="/data1/gyl/HZBank/vllm_models")
         processor = None
     elif engine == "openflamingo":
         from open_flamingo import create_model_and_transforms
